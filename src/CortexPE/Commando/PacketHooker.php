@@ -79,7 +79,7 @@ class PacketHooker implements Listener {
             }
             $pk->softEnums = SoftEnumStore::getEnums();
             self::$isIntercepting = true;
-            $target->sendDataPacket($pk);
+           // $target->sendDataPacket($pk); //Some client and Libs are crashing due to it, again this code doesnt effect the plugin at all
             self::$isIntercepting = false;
             return false;
         });
